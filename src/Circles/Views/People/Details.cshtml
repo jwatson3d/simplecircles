@@ -1,0 +1,41 @@
+@model Circles.Models.Person
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Person</legend>
+
+    <div class="display-label">FullName</div>
+    <div class="display-field">@Model.FullName</div>
+
+    <div class="display-label">Salutation</div>
+    <div class="display-field">@Model.Salutation</div>
+
+    <div class="display-label">FirstName</div>
+    <div class="display-field">@Model.FirstName</div>
+
+    <div class="display-label">MiddleName</div>
+    <div class="display-field">@Model.MiddleName</div>
+
+    <div class="display-label">LastName</div>
+    <div class="display-field">@Model.LastName</div>
+
+    <div class="display-label">Suffix</div>
+    <div class="display-field">@Model.Suffix</div>
+
+    <div class="display-label">Gender</div>
+    <div class="display-field">@Model.Gender</div>
+
+    <div class="display-label">Birthday</div>
+    <div class="display-field">@String.Format("{0:d}", Model.Birthday)</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PersonId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+

@@ -1,0 +1,81 @@
+@using Circles.Helpers
+@model Circles.Models.Person
+           
+<script language="javascript" type="text/javascript">
+    $(document).ready(PageLoad);
+
+    function PageLoad() {
+        $('#Birthday').datepicker({
+            dateFormat: 'mm/dd/yy',
+            defaultDate: '-5y',
+            initialValue: '-5y'
+        });
+    }
+</script>
+
+@* This partial view defines form fields that will appear when creating and editing entities *@
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.FullName)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.FullName)
+    @Html.ValidationMessageFor(model => model.FullName)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Salutation)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Salutation)
+    @Html.ValidationMessageFor(model => model.Salutation)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.FirstName)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.FirstName)
+    @Html.ValidationMessageFor(model => model.FirstName)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.MiddleName)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.MiddleName)
+    @Html.ValidationMessageFor(model => model.MiddleName)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.LastName)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.LastName)
+    @Html.ValidationMessageFor(model => model.LastName)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Suffix)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Suffix)
+    @Html.ValidationMessageFor(model => model.Suffix)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Gender)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Gender)
+    @Html.ValidationMessageFor(model => model.Gender)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Birthday)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Birthday)
+    @Html.ValidationMessageFor(model => model.Birthday)
+</div>
+

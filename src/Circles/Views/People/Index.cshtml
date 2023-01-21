@@ -1,0 +1,86 @@
+@model IEnumerable<Circles.Models.Person>
+
+@{
+    ViewBag.Title = "People";
+}
+
+<h2>People</h2>
+
+@if (TempData["message"] != null) {
+    <div style="margin-top: 20px; padding: 0 .7em;" class="ui-state-highlight ui-corner-all"> 
+    	<p><span style="float: left; margin-right: .3em;" class="ui-icon ui-icon-info"></span>
+			@TempData["message"]
+        </p>
+	</div>
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            FullName
+        </th>
+        <th>
+            Salutation
+        </th>
+        <th>
+            FirstName
+        </th>
+        <th>
+            MiddleName
+        </th>
+        <th>
+            LastName
+        </th>
+        <th>
+            Suffix
+        </th>
+        <th>
+            Gender
+        </th>
+        <th>
+            Birthday
+        </th>
+    </tr>
+
+@* Actions icons and links taken from http://www.asp.net/mvc/tutorials/contact-manager/iteration-2-make-the-application-look-nice-cs *@
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <a href='@Url.Action("Edit", new { id = item.PersonId })'><img src="../../Content/Edit.png" alt="Edit" style="border-style: none" /></a>
+            <a href='@Url.Action("Delete", new { id = item.PersonId })'><img src="../../Content/Delete.png" alt="Delete" style="border-style: none" /></a>
+        </td>
+        <td>
+            @Html.ActionLink(item.FullName, "Details", new { id = item.PersonId })
+        </td>
+        <td>
+			@item.Salutation
+        </td>
+        <td>
+			@item.FirstName
+        </td>
+        <td>
+			@item.MiddleName
+        </td>
+        <td>
+			@item.LastName
+        </td>
+        <td>
+			@item.Suffix
+        </td>
+        <td>
+			@item.Gender
+        </td>
+        <td>
+			@String.Format("{0:d}", item.Birthday)
+        </td>
+    </tr>
+}
+
+</table>
+
+

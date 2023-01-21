@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<hibernate-configuration  xmlns="urn:nhibernate-configuration-2.2" >
+  <session-factory name="SimpleCircles">
+    <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+    <property name='proxyfactory.factory_class'>NHibernate.ByteCode.LinFu.ProxyFactoryFactory, NHibernate.ByteCode.LinFu</property>
+
+    <!-- Settings to access a SQL Server 2008 database -->
+<!--
+    <property name="dialect">NHibernate.Dialect.MsSql2008Dialect</property>
+    <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
+    <property name="connection.connection_string">Data Source=localhost;Initial Catalog=Circles;Integrated Security=SSPI</property>
+-->
+
+    <!-- Settings to access a SQL Server CE database -->
+    <property name="dialect">NHibernate.Dialect.MsSqlCeDialect</property>
+    <property name="connection.driver_class">NHibernate.Driver.SqlServerCeDriver</property>
+    <property name="connection.connection_string">Data Source=circles.sdf</property>
+
+    <!-- Settings to access a SQLite database -->
+<!--
+    <property name="dialect">NHibernate.Dialect.SQLiteDialect</property>
+    <property name="connection.driver_class">NHibernate.Driver.SQLiteDriver</property>
+    <property name="connection.connection_string">Data Source=circles.s3db;version=3</property>
+-->
+
+    <!-- Enable SQL logging -->
+    <property name="show_sql">true</property>
+
+    <!-- Tell NHibernate what assemby contains the mapping data -->
+    <mapping assembly="CirclesNHRepository" />
+  </session-factory>
+</hibernate-configuration>

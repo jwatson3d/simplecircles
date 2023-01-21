@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Circles.Domain.Party">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgABAQAAAAEAAAAAAAAAAEAAAAAAACAAABAACIIAA=</HashCode>
+      <FileName>Party.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PartyType" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Notes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Circles.Domain.PartyType">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAgAAAAAAAAAAA=</HashCode>
+      <FileName>PartyType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Circles.Domain.Person">
+    <Position X="2" Y="5.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAABAAACAAAQQABAEEAAIgAAAACAACAAgAAg=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Circles.Domain.Organization">
+    <Position X="6.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Organization.cs</FileName>
+      <NewMemberFileName>Household.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Circles.Domain.PartyNote">
+    <Position X="1.5" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEAAAEAAAAAAAAAAAAEQAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PartyNote.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Party" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Circles.Domain.Household">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Household.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Circles.Domain.PostalAddress">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QGAAAEAgAEAAAAAJIAAcAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>PostalAddress.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Party" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Circles.Domain.ChannelAddress">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QEAAAEAAAAAAAAAAAAAQAAAAAAAAAAACAAAAAAQAAAA=</HashCode>
+      <FileName>ChannelAddress.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Party" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
